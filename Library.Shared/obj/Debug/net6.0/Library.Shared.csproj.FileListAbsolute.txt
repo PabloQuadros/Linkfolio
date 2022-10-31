@@ -1,0 +1,17 @@
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Library.Shared\obj\Debug\net6.0\Library.Shared.csproj.AssemblyReference.cache
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Library.Shared\obj\Debug\net6.0\Library.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Library.Shared\obj\Debug\net6.0\Library.Shared.AssemblyInfoInputs.cache
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Library.Shared\obj\Debug\net6.0\Library.Shared.AssemblyInfo.cs
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Library.Shared\obj\Debug\net6.0\Library.Shared.csproj.CoreCompileInputs.cache
+C:\LinkfolioApi\Library.Shared\obj\Debug\net6.0\Library.Shared.csproj.AssemblyReference.cache
+C:\LinkfolioApi\Library.Shared\obj\Debug\net6.0\Library.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\LinkfolioApi\Library.Shared\obj\Debug\net6.0\Library.Shared.AssemblyInfoInputs.cache
+C:\LinkfolioApi\Library.Shared\obj\Debug\net6.0\Library.Shared.AssemblyInfo.cs
+C:\LinkfolioApi\Library.Shared\obj\Debug\net6.0\Library.Shared.csproj.CoreCompileInputs.cache
+C:\LinkfolioApi\Library.Shared\bin\Debug\net6.0\Library.Shared.deps.json
+C:\LinkfolioApi\Library.Shared\bin\Debug\net6.0\Library.Shared.dll
+C:\LinkfolioApi\Library.Shared\bin\Debug\net6.0\Library.Shared.pdb
+C:\LinkfolioApi\Library.Shared\obj\Debug\net6.0\Library.Shared.dll
+C:\LinkfolioApi\Library.Shared\obj\Debug\net6.0\refint\Library.Shared.dll
+C:\LinkfolioApi\Library.Shared\obj\Debug\net6.0\Library.Shared.pdb
+C:\LinkfolioApi\Library.Shared\obj\Debug\net6.0\ref\Library.Shared.dll

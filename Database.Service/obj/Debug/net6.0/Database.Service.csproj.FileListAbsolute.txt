@@ -1,0 +1,22 @@
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Database.Service\obj\Debug\net6.0\Database.Service.csproj.AssemblyReference.cache
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Database.Service\obj\Debug\net6.0\Database.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Database.Service\obj\Debug\net6.0\Database.Service.AssemblyInfoInputs.cache
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Database.Service\obj\Debug\net6.0\Database.Service.AssemblyInfo.cs
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Database.Service\obj\Debug\net6.0\Database.Service.csproj.CoreCompileInputs.cache
+C:\LinkfolioApi\Database.Service\obj\Debug\net6.0\Database.Service.csproj.AssemblyReference.cache
+C:\LinkfolioApi\Database.Service\obj\Debug\net6.0\Database.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\LinkfolioApi\Database.Service\obj\Debug\net6.0\Database.Service.AssemblyInfoInputs.cache
+C:\LinkfolioApi\Database.Service\obj\Debug\net6.0\Database.Service.AssemblyInfo.cs
+C:\LinkfolioApi\Database.Service\obj\Debug\net6.0\Database.Service.csproj.CoreCompileInputs.cache
+C:\LinkfolioApi\Database.Service\bin\Debug\net6.0\Database.Service.deps.json
+C:\LinkfolioApi\Database.Service\bin\Debug\net6.0\Database.Service.dll
+C:\LinkfolioApi\Database.Service\bin\Debug\net6.0\Database.Service.pdb
+C:\LinkfolioApi\Database.Service\bin\Debug\net6.0\Library.Shared.dll
+C:\LinkfolioApi\Database.Service\bin\Debug\net6.0\Model.Shared.dll
+C:\LinkfolioApi\Database.Service\bin\Debug\net6.0\Library.Shared.pdb
+C:\LinkfolioApi\Database.Service\bin\Debug\net6.0\Model.Shared.pdb
+C:\LinkfolioApi\Database.Service\obj\Debug\net6.0\Database.Service.csproj.CopyComplete
+C:\LinkfolioApi\Database.Service\obj\Debug\net6.0\Database.Service.dll
+C:\LinkfolioApi\Database.Service\obj\Debug\net6.0\refint\Database.Service.dll
+C:\LinkfolioApi\Database.Service\obj\Debug\net6.0\Database.Service.pdb
+C:\LinkfolioApi\Database.Service\obj\Debug\net6.0\ref\Database.Service.dll

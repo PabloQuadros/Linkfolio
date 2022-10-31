@@ -1,0 +1,50 @@
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.csproj.AssemblyReference.cache
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.AssemblyInfoInputs.cache
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.AssemblyInfo.cs
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.csproj.CoreCompileInputs.cache
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\pablo\OneDrive\Área de Trabalho\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.MvcApplicationPartsAssemblyInfo.cache
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.csproj.AssemblyReference.cache
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.AssemblyInfoInputs.cache
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.AssemblyInfo.cs
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.csproj.CoreCompileInputs.cache
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.MvcApplicationPartsAssemblyInfo.cache
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.dll
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\refint\Linkfolio.Business.dll
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.pdb
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\appsettings.Development.json
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\appsettings.json
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Linkfolio.Business.exe
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Linkfolio.Business.deps.json
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Linkfolio.Business.runtimeconfig.json
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Linkfolio.Business.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Linkfolio.Business.pdb
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\DnsClient.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\MongoDB.Bson.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\MongoDB.Driver.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\MongoDB.Driver.Core.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\MongoDB.Libmongocrypt.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\SharpCompress.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Snappier.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\ZstdSharp.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Database.Service.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Library.Shared.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Model.Shared.dll
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Database.Service.pdb
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Library.Shared.pdb
+C:\LinkfolioApi\Linkfolio.Business\bin\Debug\net6.0\Model.Shared.pdb
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\staticwebassets.build.json
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\staticwebassets.development.json
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\scopedcss\bundle\Linkfolio.Business.styles.css
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.csproj.CopyComplete
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.genruntimeconfig.cache
+C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\ref\Linkfolio.Business.dll
