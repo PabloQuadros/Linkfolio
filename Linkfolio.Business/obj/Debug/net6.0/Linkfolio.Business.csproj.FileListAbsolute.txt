@@ -48,3 +48,13 @@ C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\scopedcss\bundle\Linkfolio.B
 C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.csproj.CopyComplete
 C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.genruntimeconfig.cache
 C:\LinkfolioApi\Linkfolio.Business\obj\Debug\net6.0\ref\Linkfolio.Business.dll
+C:\LinkfolioApi2\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.csproj.AssemblyReference.cache
+C:\LinkfolioApi2\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\LinkfolioApi2\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.AssemblyInfoInputs.cache
+C:\LinkfolioApi2\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.AssemblyInfo.cs
+C:\LinkfolioApi2\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.csproj.CoreCompileInputs.cache
+C:\LinkfolioApi2\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.MvcApplicationPartsAssemblyInfo.cs
+C:\LinkfolioApi2\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.MvcApplicationPartsAssemblyInfo.cache
+C:\LinkfolioApi2\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.dll
+C:\LinkfolioApi2\Linkfolio.Business\obj\Debug\net6.0\refint\Linkfolio.Business.dll
+C:\LinkfolioApi2\Linkfolio.Business\obj\Debug\net6.0\Linkfolio.Business.pdb

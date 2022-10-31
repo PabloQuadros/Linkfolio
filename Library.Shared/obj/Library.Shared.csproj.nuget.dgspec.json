@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\LinkfolioApi\\Library.Shared\\Library.Shared.csproj": {}
+    "C:\\LinkfolioApi2\\Library.Shared\\Library.Shared.csproj": {}
   },
   "projects": {
-    "C:\\LinkfolioApi\\Library.Shared\\Library.Shared.csproj": {
+    "C:\\LinkfolioApi2\\Library.Shared\\Library.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LinkfolioApi\\Library.Shared\\Library.Shared.csproj",
+        "projectUniqueName": "C:\\LinkfolioApi2\\Library.Shared\\Library.Shared.csproj",
         "projectName": "Library.Shared",
-        "projectPath": "C:\\LinkfolioApi\\Library.Shared\\Library.Shared.csproj",
+        "projectPath": "C:\\LinkfolioApi2\\Library.Shared\\Library.Shared.csproj",
         "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\LinkfolioApi\\Library.Shared\\obj\\",
+        "outputPath": "C:\\LinkfolioApi2\\Library.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

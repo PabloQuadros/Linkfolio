@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y4EaZaWvVrOzJR0SCnDWr9H6lCK+8UTRD9iqU9TY3V8zwfy1542fAq7DRGy8mUJircORD2Q0No+PAR8cVtitIQ==",
+  "dgSpecHash": "AW0LMKh5FzA8nr10ag6Kjy+2fM2j+71SF13oGIf3PDmB8w3BXuXyqQ626Xcd8s/FqlRrlJBwSWQ3vkVRarAtNA==",
   "success": true,
-  "projectFilePath": "C:\\LinkfolioApi\\Library.Shared\\Library.Shared.csproj",
+  "projectFilePath": "C:\\LinkfolioApi2\\Library.Shared\\Library.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pablo\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\pablo\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\LinkfolioApi\\Linkfolio.Business\\Linkfolio.Business.csproj": {}
+    "C:\\LinkfolioApi2\\Linkfolio.Business\\Linkfolio.Business.csproj": {}
   },
   "projects": {
-    "C:\\LinkfolioApi\\Database.Service\\Database.Service.csproj": {
+    "C:\\LinkfolioApi2\\Database.Service\\Database.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LinkfolioApi\\Database.Service\\Database.Service.csproj",
+        "projectUniqueName": "C:\\LinkfolioApi2\\Database.Service\\Database.Service.csproj",
         "projectName": "Database.Service",
-        "projectPath": "C:\\LinkfolioApi\\Database.Service\\Database.Service.csproj",
+        "projectPath": "C:\\LinkfolioApi2\\Database.Service\\Database.Service.csproj",
         "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\LinkfolioApi\\Database.Service\\obj\\",
+        "outputPath": "C:\\LinkfolioApi2\\Database.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -33,11 +33,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\LinkfolioApi\\Library.Shared\\Library.Shared.csproj": {
-                "projectPath": "C:\\LinkfolioApi\\Library.Shared\\Library.Shared.csproj"
+              "C:\\LinkfolioApi2\\Library.Shared\\Library.Shared.csproj": {
+                "projectPath": "C:\\LinkfolioApi2\\Library.Shared\\Library.Shared.csproj"
               },
-              "C:\\LinkfolioApi\\Model.Shared\\Model.Shared.csproj": {
-                "projectPath": "C:\\LinkfolioApi\\Model.Shared\\Model.Shared.csproj"
+              "C:\\LinkfolioApi2\\Model.Shared\\Model.Shared.csproj": {
+                "projectPath": "C:\\LinkfolioApi2\\Model.Shared\\Model.Shared.csproj"
               }
             }
           }
@@ -84,14 +84,14 @@
         }
       }
     },
-    "C:\\LinkfolioApi\\Library.Shared\\Library.Shared.csproj": {
+    "C:\\LinkfolioApi2\\Library.Shared\\Library.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LinkfolioApi\\Library.Shared\\Library.Shared.csproj",
+        "projectUniqueName": "C:\\LinkfolioApi2\\Library.Shared\\Library.Shared.csproj",
         "projectName": "Library.Shared",
-        "projectPath": "C:\\LinkfolioApi\\Library.Shared\\Library.Shared.csproj",
+        "projectPath": "C:\\LinkfolioApi2\\Library.Shared\\Library.Shared.csproj",
         "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\LinkfolioApi\\Library.Shared\\obj\\",
+        "outputPath": "C:\\LinkfolioApi2\\Library.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -157,14 +157,14 @@
         }
       }
     },
-    "C:\\LinkfolioApi\\Linkfolio.Business\\Linkfolio.Business.csproj": {
+    "C:\\LinkfolioApi2\\Linkfolio.Business\\Linkfolio.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LinkfolioApi\\Linkfolio.Business\\Linkfolio.Business.csproj",
+        "projectUniqueName": "C:\\LinkfolioApi2\\Linkfolio.Business\\Linkfolio.Business.csproj",
         "projectName": "Linkfolio.Business",
-        "projectPath": "C:\\LinkfolioApi\\Linkfolio.Business\\Linkfolio.Business.csproj",
+        "projectPath": "C:\\LinkfolioApi2\\Linkfolio.Business\\Linkfolio.Business.csproj",
         "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\LinkfolioApi\\Linkfolio.Business\\obj\\",
+        "outputPath": "C:\\LinkfolioApi2\\Linkfolio.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -186,8 +186,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\LinkfolioApi\\Database.Service\\Database.Service.csproj": {
-                "projectPath": "C:\\LinkfolioApi\\Database.Service\\Database.Service.csproj"
+              "C:\\LinkfolioApi2\\Database.Service\\Database.Service.csproj": {
+                "projectPath": "C:\\LinkfolioApi2\\Database.Service\\Database.Service.csproj"
               }
             }
           }
@@ -202,10 +202,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[6.0.10, )"
-            },
             "MongoDB.Bson": {
               "target": "Package",
               "version": "[2.18.0, )"
@@ -221,10 +217,6 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
-            },
-            "System.IdentityModel.Tokens.Jwt": {
-              "target": "Package",
-              "version": "[6.25.0, )"
             }
           },
           "imports": [
@@ -249,14 +241,14 @@
         }
       }
     },
-    "C:\\LinkfolioApi\\Model.Shared\\Model.Shared.csproj": {
+    "C:\\LinkfolioApi2\\Model.Shared\\Model.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\LinkfolioApi\\Model.Shared\\Model.Shared.csproj",
+        "projectUniqueName": "C:\\LinkfolioApi2\\Model.Shared\\Model.Shared.csproj",
         "projectName": "Model.Shared",
-        "projectPath": "C:\\LinkfolioApi\\Model.Shared\\Model.Shared.csproj",
+        "projectPath": "C:\\LinkfolioApi2\\Model.Shared\\Model.Shared.csproj",
         "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\LinkfolioApi\\Model.Shared\\obj\\",
+        "outputPath": "C:\\LinkfolioApi2\\Model.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
