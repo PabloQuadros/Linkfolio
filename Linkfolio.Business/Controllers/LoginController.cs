@@ -1,4 +1,6 @@
-﻿using Linkfolio.Business.Business;
+﻿using Linkfolio.Business.Authenticate;
+using Linkfolio.Business.Business;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Model.Shared.User;
 using MongoDB.Bson.IO;
@@ -56,6 +58,7 @@ namespace Linkfolio.Business.Controllers
             /// </summary>
             /// <returns> Retorna objeto do tipo object</returns>
             [HttpGet("GetLogin")]
+            [Authorize]
             public object GetLogin(string? gkey)
             {
                 try
@@ -77,13 +80,15 @@ namespace Linkfolio.Business.Controllers
         /// </summary>
         /// <returns> Retorna objeto do tipo object</returns>
         [HttpGet("Login")]
-        public object Login(string email, string password)
+        [AllowAnonymous]
+        public async Task<ActionResult<dynamic>> Login(string email, string password)
         {
             try
             {
                 LoginModel? login = new LoginModel();
                 login = this.business.GetCheckLogin(email,password);
-                return Ok(login);
+                var token = TokenService.GenerateToken(login);
+                return Ok(token);
             }
             catch (Exception e)
             {
@@ -98,7 +103,8 @@ namespace Linkfolio.Business.Controllers
         /// </summary>
         /// <returns> Retorna objeto do tipo object</returns>
         [HttpGet("GetAllLogin")]
-            public object GetAllLogin()
+        [Authorize]
+        public object GetAllLogin()
             {
                 try
                 {
@@ -116,6 +122,7 @@ namespace Linkfolio.Business.Controllers
             /// </summary>
             /// <returns> Retorna objeto do tipo object</returns>
             [HttpPut("Update")]
+            [Authorize]
             public object Update([FromBody] LoginModel login)
             {
                 try
@@ -135,6 +142,7 @@ namespace Linkfolio.Business.Controllers
             /// </summary>
             /// <returns> Retorna objeto do tipo object</returns>
             [HttpDelete("Delete")]
+            [Authorize]
             public object Delete(string gkey)
             {
                 try
