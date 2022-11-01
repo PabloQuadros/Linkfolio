@@ -57,8 +57,9 @@ namespace Linkfolio.Business.Controllers
             /// Função responsável por receber uma requisição get e encaminhar o valor recebido para buscar os dados de um usuário existente. 
             /// </summary>
             /// <returns> Retorna objeto do tipo object</returns>
+            
             [HttpGet("GetLogin")]
-            [Authorize]
+            [Authorize] 
             public object GetLogin(string? gkey)
             {
                 try
@@ -79,12 +80,14 @@ namespace Linkfolio.Business.Controllers
         /// Função responsável por receber uma requisição get e encaminhar o valor recebido para buscar os dados de um usuário existente. 
         /// </summary>
         /// <returns> Retorna objeto do tipo object</returns>
-        [HttpGet("Login")]
         [AllowAnonymous]
-        public async Task<ActionResult<dynamic>> Login(string email, string password)
+        [HttpPost("Login")]
+        
+        public async Task<ActionResult<dynamic>> Autorize(string email, string password)
         {
             try
             {
+                
                 LoginModel? login = new LoginModel();
                 login = this.business.GetCheckLogin(email,password);
                 var token = TokenService.GenerateToken(login);
@@ -103,7 +106,6 @@ namespace Linkfolio.Business.Controllers
         /// </summary>
         /// <returns> Retorna objeto do tipo object</returns>
         [HttpGet("GetAllLogin")]
-        [Authorize]
         public object GetAllLogin()
             {
                 try
