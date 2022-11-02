@@ -59,7 +59,6 @@ namespace Linkfolio.Business.Controllers
             /// <returns> Retorna objeto do tipo object</returns>
             
             [HttpGet("GetLogin")]
-            [Authorize] 
             public object GetLogin(string? gkey)
             {
                 try

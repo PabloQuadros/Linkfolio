@@ -84,7 +84,7 @@ namespace Linkfolio.Business.Business
                     login = this.repository.Get(login);
                     if (login == null || string.IsNullOrEmpty(login.Name))
                     {
-                        throw new Exception("Usuário não localizado");
+                        throw new Exception(String.Format("Usuário com a Gkey {0} não localizado", gkey));
                     }
                     return login;
                 }
