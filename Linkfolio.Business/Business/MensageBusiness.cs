@@ -34,7 +34,7 @@ namespace Linkfolio.Business.Business
             try
             {
                 msg.Mensage = msg.Mensage.Trim();
-               
+                msg.Updated = null;
                 switch (msgVerification(msg))
                 {
                     case 0:
@@ -65,7 +65,7 @@ namespace Linkfolio.Business.Business
                     msg = this.repository.Get(msg);
                     if (msg == null || string.IsNullOrEmpty(msg.SenderGkey))
                     {
-                        throw new Exception("Mensagem não localizado");
+                        throw new Exception("Mensagem não localizada");
                     }
                     return msg;
                 }
@@ -139,7 +139,7 @@ namespace Linkfolio.Business.Business
                     msg = this.repository.Get(msg);
                     if (msg== null || string.IsNullOrEmpty(msg.SenderGkey))
                     {
-                        throw new Exception("Mensagem  não localizado");
+                        throw new Exception("Mensagem  não localizada");
                     }
                     this.repository.Delete(msg);
                     return "Mensagem excluída com exito";
