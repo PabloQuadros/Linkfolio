@@ -1,4 +1,5 @@
 ﻿using Linkfolio.Business.Business;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Model.Shared.User;
 
@@ -6,6 +7,7 @@ namespace Linkfolio.Business.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
     public class PortfolioController : ControllerBase
     {
 
@@ -74,6 +76,24 @@ namespace Linkfolio.Business.Controllers
             }
         }
 
+        /// <summary>
+        /// Requisição POST
+        /// Função responsável por receber uma requisição post e encaminhar o(s) dado(s) para atualizar o cadastro de um usuário.
+        /// </summary>
+        /// <returns> Retorna objeto do tipo object</returns>
+        [HttpPut("Update")]
+        public object UpdatePortfolio([FromBody] PortfolioModel portfolio)
+        {
+            try
+            {
+                return Ok(this.business.UpdatePortfolio(portfolio));
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+
+        }
 
         /// <summary>
         /// Requisição DELETE

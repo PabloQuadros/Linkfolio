@@ -1,4 +1,5 @@
 ﻿using Linkfolio.Business.Business;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Model.Shared.User;
 
@@ -6,6 +7,7 @@ namespace Linkfolio.Business.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
     public class MensageController : ControllerBase
     {
         private readonly ILogger<MensageController> _logger;

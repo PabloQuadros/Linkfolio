@@ -52,12 +52,12 @@ namespace Linkfolio.Business.Controllers
                 }
             }
 
-            /// <summary>
-            /// Requisição GET(Login)
-            /// Função responsável por receber uma requisição get e encaminhar o valor recebido para buscar os dados de um usuário existente. 
-            /// </summary>
-            /// <returns> Retorna objeto do tipo object</returns>
-            
+        /// <summary>
+        /// Requisição GET(Login)
+        /// Função responsável por receber uma requisição get e encaminhar o valor recebido para buscar os dados de um usuário existente. 
+        /// </summary>
+        /// <returns> Retorna objeto do tipo object</returns>
+            [Authorize]
             [HttpGet("GetLogin")]
             public object GetLogin(string? gkey)
             {
@@ -79,16 +79,21 @@ namespace Linkfolio.Business.Controllers
         /// Função responsável por receber uma requisição get e encaminhar o valor recebido para buscar os dados de um usuário existente. 
         /// </summary>
         /// <returns> Retorna objeto do tipo object</returns>
-        [AllowAnonymous]
+
         [HttpPost("Login")]
-        
-        public async Task<ActionResult<dynamic>> Autorize(string email, string password)
+        public async Task<ActionResult<dynamic>> AuthenticateAsync( string email,  string password)
         {
             try
             {
                 
-                LoginModel? login = new LoginModel();
-                login = this.business.GetCheckLogin(email,password);
+                LoginModel login = new LoginModel();
+                login.Email = email;
+                login.Password = password;
+                login = business.GetCheckLogin(login.Email, login.Password);
+                if(login == null || string.IsNullOrEmpty(login.Name))
+                {
+                    throw new Exception("Usuário não cadastrado");
+                }
                 var token = TokenService.GenerateToken(login);
                 return Ok(token);
             }
@@ -104,7 +109,9 @@ namespace Linkfolio.Business.Controllers
         /// Função responsável por receber uma requisição get e retornar uma lista de todos os usuários registrados no banco de dados. 
         /// </summary>
         /// <returns> Retorna objeto do tipo object</returns>
+        [Authorize]
         [HttpGet("GetAllLogin")]
+        
         public object GetAllLogin()
             {
                 try

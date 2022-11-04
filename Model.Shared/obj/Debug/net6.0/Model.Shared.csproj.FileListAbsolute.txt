@@ -15,3 +15,15 @@ C:\LinkfolioApi\Model.Shared\obj\Debug\net6.0\Model.Shared.dll
 C:\LinkfolioApi\Model.Shared\obj\Debug\net6.0\refint\Model.Shared.dll
 C:\LinkfolioApi\Model.Shared\obj\Debug\net6.0\Model.Shared.pdb
 C:\LinkfolioApi\Model.Shared\obj\Debug\net6.0\ref\Model.Shared.dll
+C:\LinkfolioApi2\Model.Shared\bin\Debug\net6.0\Model.Shared.deps.json
+C:\LinkfolioApi2\Model.Shared\bin\Debug\net6.0\Model.Shared.dll
+C:\LinkfolioApi2\Model.Shared\bin\Debug\net6.0\Model.Shared.pdb
+C:\LinkfolioApi2\Model.Shared\obj\Debug\net6.0\Model.Shared.csproj.AssemblyReference.cache
+C:\LinkfolioApi2\Model.Shared\obj\Debug\net6.0\Model.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\LinkfolioApi2\Model.Shared\obj\Debug\net6.0\Model.Shared.AssemblyInfoInputs.cache
+C:\LinkfolioApi2\Model.Shared\obj\Debug\net6.0\Model.Shared.AssemblyInfo.cs
+C:\LinkfolioApi2\Model.Shared\obj\Debug\net6.0\Model.Shared.csproj.CoreCompileInputs.cache
+C:\LinkfolioApi2\Model.Shared\obj\Debug\net6.0\Model.Shared.dll
+C:\LinkfolioApi2\Model.Shared\obj\Debug\net6.0\refint\Model.Shared.dll
+C:\LinkfolioApi2\Model.Shared\obj\Debug\net6.0\Model.Shared.pdb
+C:\LinkfolioApi2\Model.Shared\obj\Debug\net6.0\ref\Model.Shared.dll

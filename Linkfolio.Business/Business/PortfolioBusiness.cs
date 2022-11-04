@@ -151,6 +151,67 @@ namespace Linkfolio.Business.Business
 
         }
 
+        /// <summary>
+        /// Método de negócio responsável por atualizar o(s) dado(s) da conta de um certo usuário.
+        /// Nesse método é chamado o método dataUpdateVerification para verificar se os dados estão de acordo.
+        /// </summary>
+        /// <param name="newLogin">Informações necessárias para encontrar a conta do usuário no banco de dados e a(s) informação(ões) a ser(em) atualizada(s).</param>
+        public string UpdatePortfolio(PortfolioModel newPortfolio)
+        {
+            try
+            {
+                string strGkeyModel = "^([0-9]{1,})$";
+                PortfolioModel? portfolio = new PortfolioModel();
+                portfolio.Gkey = newPortfolio.Gkey.Trim();
+
+                if (!string.IsNullOrEmpty(portfolio.Gkey) && (Regex.IsMatch(portfolio.Gkey, strGkeyModel)))
+                {
+                    portfolio = this.repository.Get(portfolio);
+                    if (portfolio == null || string.IsNullOrEmpty(portfolio.Title))
+                    {
+                        throw new Exception("Portfolio não localizada");
+                    }
+                    else
+                    {
+                        ///!!!
+                        ///Necessário rever a questão de _id, pois na requisição muda o _id e assim não é possível dar update.
+                        ///Entretanto o _id teoricamente não irá vir na requisição.
+                        newPortfolio._id = portfolio._id;
+                        newPortfolio.Gkey = portfolio.Gkey;
+                        newPortfolio.Created = portfolio.Created;
+                        newPortfolio.UserGkey = portfolio.UserGkey;
+                        if(string.IsNullOrEmpty(newPortfolio.Title.Trim()))
+                        {
+                            throw new Exception("Valor de título inválido");
+                        }
+                        if (newPortfolio.Title == portfolio.Title)
+                        {
+                            newPortfolio.Title = portfolio.Title;
+                        }
+                        if (string.IsNullOrEmpty(newPortfolio.Description.Trim()))
+                        {
+                            throw new Exception("Valor de descrição inválido");
+                        }
+                        if(newPortfolio.Description == portfolio.Description)
+                        {
+                            newPortfolio.Description = portfolio.Description;
+                        }
+                        newPortfolio.Description = newPortfolio.Description.Trim();
+                        newPortfolio.Title = newPortfolio.Title.Trim();
+                        this.repository.Update(newPortfolio);
+                        return "Atualização realizado com sucesso";
+                    }
+                    throw new Exception("Erro inesperado");
+
+                }
+                throw new Exception("Valor inválido");
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
         public string DeletePortfolio(string gkey)
         {
             try
@@ -176,5 +237,7 @@ namespace Linkfolio.Business.Business
             }
         }
 
+
+       
     }
 }

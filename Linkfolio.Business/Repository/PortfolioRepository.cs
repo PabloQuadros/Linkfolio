@@ -120,6 +120,34 @@ namespace Linkfolio.Business.Repository
             }
         }
 
+        /// <summary>
+        /// Método responsável por atualizar o(s) dado(s) de uma conta no banco de dados.
+        /// </summary>
+        /// <param name="login">Dados para localizar a conta e os dados a serem atualizados.</param>
+        public bool Update(PortfolioModel portfolio)
+        {
+            try
+            {
+                this.DatabaseConnector.Open();
+
+                try
+                {
+                    Dictionary<string, string> dictionary = new Dictionary<string, string>();
+                    dictionary.Add("Gkey", portfolio.Gkey);
+
+                    return this.DatabaseConnector.Update<PortfolioModel>(dictionary, portfolio);
+                }
+                catch (Exception e)
+                {
+                    throw new Exception(e.Message);
+                }
+            }
+            finally
+            {
+                this.DatabaseConnector.Close();
+            }
+        }
+
 
         /// <summary>
         /// Método responsável por deletar uma conta no banco de dados.
