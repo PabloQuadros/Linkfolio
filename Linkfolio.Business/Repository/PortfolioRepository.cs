@@ -58,7 +58,7 @@ namespace Linkfolio.Business.Repository
         }
 
 
-        public bool? Delete(MensageModel msg)
+        public bool? Delete(MessageModel msg)
         {
             try
             {
@@ -69,7 +69,7 @@ namespace Linkfolio.Business.Repository
                     Dictionary<string, string> dictionary = new Dictionary<string, string>();
                     dictionary.Add("Gkey", msg.Gkey);
 
-                    return this.DatabaseConnector.Delete<MensageModel>(dictionary, msg);
+                    return this.DatabaseConnector.Delete<MessageModel>(dictionary, msg);
                 }
                 catch (Exception e)
                 {

@@ -3,13 +3,13 @@ using Model.Shared.User;
 
 namespace Linkfolio.Business.Repository
 {
-    public class MensageRepository : DatabaseRepository<MensageRepository, MensageModel>
+    public class MessageRepository : DatabaseRepository<MessageRepository, MessageModel>
     {
         protected override void Init()
         {
         }
 
-        public bool Create(MensageModel msg)
+        public bool Create(MessageModel msg)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace Linkfolio.Business.Repository
             }
         }
 
-        public MensageModel? Get(MensageModel msg)
+        public MessageModel? Get(MessageModel msg)
         {
             try
             {
@@ -41,7 +41,7 @@ namespace Linkfolio.Business.Repository
                     Dictionary<string, string> dictionary = new Dictionary<string, string>();
                     dictionary.Add("Gkey", msg.Gkey);
 
-                    return this.DatabaseConnector.Get<MensageModel>(dictionary, msg);
+                    return this.DatabaseConnector.Get<MessageModel>(dictionary, msg);
                 }
                 catch (Exception e)
                 {
@@ -58,7 +58,7 @@ namespace Linkfolio.Business.Repository
 
 
 
-        public bool Update(MensageModel msg)
+        public bool Update(MessageModel msg)
         {
             try
             {
@@ -69,7 +69,7 @@ namespace Linkfolio.Business.Repository
                     Dictionary<string, string> dictionary = new Dictionary<string, string>();
                     dictionary.Add("Gkey", msg.Gkey);
 
-                    return this.DatabaseConnector.Update<MensageModel>(dictionary, msg);
+                    return this.DatabaseConnector.Update<MessageModel>(dictionary, msg);
                 }
                 catch (Exception e)
                 {
@@ -83,7 +83,7 @@ namespace Linkfolio.Business.Repository
         }
 
 
-        public bool? Delete(MensageModel msg)
+        public bool? Delete(MessageModel msg)
         {
             try
             {
@@ -94,7 +94,7 @@ namespace Linkfolio.Business.Repository
                     Dictionary<string, string> dictionary = new Dictionary<string, string>();
                     dictionary.Add("Gkey", msg.Gkey);
 
-                    return this.DatabaseConnector.Delete<MensageModel>(dictionary, msg);
+                    return this.DatabaseConnector.Delete<MessageModel>(dictionary, msg);
                 }
                 catch (Exception e)
                 {
