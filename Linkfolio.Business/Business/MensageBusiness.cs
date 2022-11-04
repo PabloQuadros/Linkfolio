@@ -7,28 +7,37 @@ using System.Text.RegularExpressions;
 
 namespace Linkfolio.Business.Business
 {
-        public class MensageBusiness : Singleton<MensageBusiness>
+    /// <summary>
+    /// Classe responsável pelos modelos de negócio.
+    /// Funções da classe: 
+    ///    1. Receber os dados passados pelo MensageController.
+    ///    2. Aplicar a(s) regra(s) de negócio nos dados recebidos.
+    ///    3. Encaminhar/receber a(s) informação(ões) para/da classe MensageRepository.
+    /// </summary>
+    public class MensageBusiness : Singleton<MensageBusiness>
+    {
+        private MensageRepository repository;
+
+        private LoginBusiness loginBusiness;
+
+        protected override void Init()
         {
-            private MensageRepository repository;
 
-            private LoginBusiness loginBusiness;
-            
-            protected override void Init()
-            {
-                
-            }
+        }
 
-            
+        public MensageBusiness()
+        {
+            this.repository = MensageRepository.GetInstance();
+            this.loginBusiness = LoginBusiness.GetInstance();
+        }
 
-            /// <summary>
-            /// Construtor da CLasse, que insere uma instância da Classe LoginRepository na variável repository. 
-            /// </summary>
-            public MensageBusiness()
-            {
-                this.repository = MensageRepository.GetInstance();
-                this. loginBusiness = LoginBusiness.GetInstance();
-             }
 
+        /// <summary>
+        /// Método de negócio responsável por criar uma mensagem.
+        /// Verifica se os dados estão de acordo usando o método msgVerification, caso os dados estejam de acordo , são salvos no banco de dados.
+        /// Se os dados não estiverem de acordo nenhum dado é salvo, retornando uma mensagem de erro relativo ao dado que não está de acordo.
+        /// </summary>
+        /// <param name="msg">Informações necessárias para criar a mensagem.</param>
         public string CreateMensage(MensageModel msg)
         {
             try
@@ -51,16 +60,18 @@ namespace Linkfolio.Business.Business
         }
 
 
-
+        /// <summary>
+        /// Método de negócio responsável por localizar uma mensagem.
+        /// </summary>
+        /// <param name="gkey">Informações necessárias para localizar a mensagem.</param>
         public MensageModel? GetMensage(string gkey)
         {
             try
             {
                 string strGkeyModel = "^([0-9]{1,})$";
-                MensageModel? msg= new MensageModel();
+                MensageModel? msg = new MensageModel();
                 if (!string.IsNullOrEmpty(gkey) && (Regex.IsMatch(gkey, strGkeyModel)))
                 {
-                    /// Retirando espaços em vazios no início e fim das variáveis.
                     msg.Gkey = gkey.Trim();
                     msg = this.repository.Get(msg);
                     if (msg == null || string.IsNullOrEmpty(msg.SenderGkey))
@@ -79,10 +90,9 @@ namespace Linkfolio.Business.Business
         }
 
         /// <summary>
-        /// Método de negócio responsável por atualizar o(s) dado(s) da conta de um certo usuário.
-        /// Nesse método é chamado o método dataUpdateVerification para verificar se os dados estão de acordo.
+        /// Método de negócio responsável por atualizar o(s) dado(s) de uma mensagem.
         /// </summary>
-        /// <param name="newLogin">Informações necessárias para encontrar a conta do usuário no banco de dados e a(s) informação(ões) a ser(em) atualizada(s).</param>
+        /// <param name="newMsg">Informações necessárias para encontrar a mensage no banco de dados e a(s) informação(ões) a ser(em) atualizada(s).</param>
         public string UpdateMensage(MensageModel newMsg)
         {
             try
@@ -100,9 +110,6 @@ namespace Linkfolio.Business.Business
                     }
                     else
                     {
-                        ///!!!
-                        ///Necessário rever a questão de _id, pois na requisição muda o _id e assim não é possível dar update.
-                        ///Entretanto o _id teoricamente não irá vir na requisição.
                         newMsg._id = msg._id;
                         newMsg.Gkey = msg.Gkey;
                         newMsg.Created = msg.Created;
@@ -110,9 +117,9 @@ namespace Linkfolio.Business.Business
                         newMsg.ReciverGkey = msg.ReciverGkey;
                         this.repository.Update(newMsg);
                         return "Atualização realizado com sucesso";
-                    }   
-                        throw new Exception("Erro inesperado");
-                 
+                    }
+                    throw new Exception("Erro inesperado");
+
                 }
                 throw new Exception("Valor inválido");
             }
@@ -124,9 +131,9 @@ namespace Linkfolio.Business.Business
 
 
         /// <summary>
-        /// Método de negócio responsável por excluir a conta de um certo usuário.
+        /// Método de negócio responsável por excluir uma mensagem.
         /// </summary>
-        /// <param name="gkey">Informação necessária para encontrar a conta do usuário no banco de dados.</param>
+        /// <param name="gkey">Informação necessária para encontrar a mensagem no banco de dados.</param>
         public string DeleteMensage(string gkey)
         {
             try
@@ -137,7 +144,7 @@ namespace Linkfolio.Business.Business
                     MensageModel? msg = new MensageModel();
                     msg.Gkey = gkey.Trim();
                     msg = this.repository.Get(msg);
-                    if (msg== null || string.IsNullOrEmpty(msg.SenderGkey))
+                    if (msg == null || string.IsNullOrEmpty(msg.SenderGkey))
                     {
                         throw new Exception("Mensagem  não localizada");
                     }
@@ -152,7 +159,10 @@ namespace Linkfolio.Business.Business
             }
         }
 
-
+        /// <summary>
+        ///Método responsável por validar se o remetente e o destinatário existem.
+        /// </summary>
+        /// <param name="msg">Dados a serem validados</param>
         public int msgVerification(MensageModel msg)
         {
             try
@@ -169,5 +179,5 @@ namespace Linkfolio.Business.Business
 
 
     }
-  }
+}
 

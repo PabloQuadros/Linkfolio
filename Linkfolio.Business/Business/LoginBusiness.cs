@@ -21,9 +21,6 @@ namespace Linkfolio.Business.Business
 
         }
 
-        /// <summary>
-        /// Construtor da CLasse, que insere uma instância da Classe LoginRepository na variável repository. 
-        /// </summary>
         public LoginBusiness()
         {
             this.repository = LoginRepository.GetInstance();
@@ -98,10 +95,10 @@ namespace Linkfolio.Business.Business
         }
 
         /// <summary>
-        /// Método de negócio responsável por trazer as informações sobre a conta do usuário.
+        /// Método de negócio responsável por validar a conta de um usuário.
         /// Retorna um único usuário, caso não encontre é retornado NULL.
         /// </summary>
-        /// <param name="gkey">Informações necessárias para encontrar a conta do usuário no banco de dados.</param>
+        /// <param name="email" name="password">Informações necessárias para encontrar a conta do usuário no banco de dados.</param>
         public LoginModel? GetCheckLogin(string email, string password)
         {
             try
@@ -128,7 +125,7 @@ namespace Linkfolio.Business.Business
                     {
                         throw new Exception("Senha inválida");
                     }
-                    if(login.Email == email && login.Password == password)
+                    if (login.Email == email && login.Password == password)
                     {
                         return login;
                     }
@@ -150,7 +147,7 @@ namespace Linkfolio.Business.Business
         {
             try
             {
-                List<LoginModel> loginList = new List<LoginModel>();
+                List<LoginModel>? loginList = new List<LoginModel>();
                 loginList = this.repository.List(loginList);
                 if (loginList == null || loginList.Any() == false)
                 {
@@ -190,9 +187,6 @@ namespace Linkfolio.Business.Business
                         newLogin.Name = newLogin.Name.Trim();
                         newLogin.Email = newLogin.Email.Trim();
                         newLogin.Password = newLogin.Password.Trim();
-                        ///!!!
-                        ///Necessário rever a questão de _id, pois na requisição muda o _id e assim não é possível dar update.
-                        ///Entretanto o _id teoricamente não irá vir na requisição.
                         newLogin._id = login._id;
                         switch (dataUpdateVerification(newLogin))
                         {
@@ -254,7 +248,6 @@ namespace Linkfolio.Business.Business
         ///Esse método também verifica se o e-mail já está registrado.
         /// </summary>
         /// <param name="login">Dados a serem validados</param>
-        /// <returns></returns>
         public int dataVerification(LoginModel login)
         {
             try
@@ -287,7 +280,6 @@ namespace Linkfolio.Business.Business
         /// Esse método também verifica se o e-mail já está registrado, porem verifica também se o e-mail já registrado é do mesmo usuário que está sendo feita a atualização de dados.
         /// </summary>
         /// <param name="login">Dados a serem validados</param>
-        /// <returns></returns>
         public int dataUpdateVerification(LoginModel login)
         {
             try

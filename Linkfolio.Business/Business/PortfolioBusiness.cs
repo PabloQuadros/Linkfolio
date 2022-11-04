@@ -5,6 +5,13 @@ using System.Text.RegularExpressions;
 
 namespace Linkfolio.Business.Business
 {
+    /// <summary>
+    /// Classe responsável pelos modelos de negócio.
+    /// Funções da classe: 
+    ///    1. Receber os dados passados pelo PortfolioController.
+    ///    2. Aplicar a(s) regra(s) de negócio nos dados recebidos.
+    ///    3. Encaminhar/receber a(s) informação(ões) para/da classe PortfolioRepository.
+    /// </summary>
     public class PortfolioBusiness : Singleton<PortfolioBusiness>
     {
         private PortfolioRepository repository;
@@ -13,35 +20,40 @@ namespace Linkfolio.Business.Business
         protected override void Init()
         {
         }
-        /// <summary>
-        /// Construtor da CLasse, que insere uma instância da Classe LoginRepository na variável repository. 
-        /// </summary>
+
         public PortfolioBusiness()
         {
             this.repository = PortfolioRepository.GetInstance();
             this.loginBusiness = LoginBusiness.GetInstance();
         }
 
+
+        /// <summary>
+        /// Método de negócio responsável por criar um portfolio.
+        /// Verifica se os dados estão de acordo usando o método portfolioVerification, caso os dados estejam de acordo , são salvos no banco de dados.
+        /// Se os dados não estiverem de acordo nenhum dado é salvo, retornando uma mensagem de erro relativo ao dado que não está de acordo.
+        /// </summary>
+        /// <param name="portfolio">Informações necessárias para criar a mensagem.</param>
         public string CreatePortfolio(PortfolioModel portfolio)
         {
             try
             {
-                
-                    portfolio.Title = portfolio.Title.Trim();
-                    portfolio.Description = portfolio.Description.Trim();
-                    portfolio.Gkey = portfolio.Gkey.Trim();
-                    portfolio.Updated = null;
-                    switch (portfolioVerification(portfolio))
-                    {
-                        case 0:
-                            this.repository.Create(portfolio);
-                            return "Portfolio criado com sucesso";
-                        case 1:
-                            return "Titulo inválido.";
-                        case 2:
-                            return "Descrição inválida.";
-                    }
-            
+
+                portfolio.Title = portfolio.Title.Trim();
+                portfolio.Description = portfolio.Description.Trim();
+                portfolio.Gkey = portfolio.Gkey.Trim();
+                portfolio.Updated = null;
+                switch (portfolioVerification(portfolio))
+                {
+                    case 0:
+                        this.repository.Create(portfolio);
+                        return "Portfolio criado com sucesso";
+                    case 1:
+                        return "Titulo inválido.";
+                    case 2:
+                        return "Descrição inválida.";
+                }
+
                 throw new Exception("Erro inesperado");
             }
             catch (Exception e)
@@ -51,29 +63,23 @@ namespace Linkfolio.Business.Business
 
         }
 
+        /// <summary>
+        /// Método de negócio responsável por validar certos dados do portfolio.
+        /// </summary>
+        /// <param name="portfolio">Informações necessárias para localizar o portfolio.</param>
         public int portfolioVerification(PortfolioModel portfolio)
         {
             try
             {
-                //string strTitleModel = "^([0-9a-zA-Z]{1,})$";
-                //string strDescriptionModel = "^([0-9a-zA-Z]{1,})$";
                 this.loginBusiness.GetLogin(portfolio.UserGkey);
                 if (string.IsNullOrEmpty(portfolio.Title))
                 {
                     return 1;
                 }
-                // if(!Regex.IsMatch(portfolio.Title, strTitleModel))
-                //{
-                  //  return 1;
-               // }
                 if (string.IsNullOrEmpty(portfolio.Description))
                 {
                     return 2;
                 }
-                //if(!Regex.IsMatch(portfolio.Description, strDescriptionModel))
-                //{
-                //  return 2;
-                // }
 
                 return 0;
             }
@@ -83,6 +89,10 @@ namespace Linkfolio.Business.Business
             }
         }
 
+        /// <summary>
+        /// Método de negócio responsável por localizar um portfolio.
+        /// </summary>
+        /// <param name="gkey">Informações necessárias para localizar o portfolio.</param>
         public PortfolioModel? GetPortfolio(string gkey)
         {
             try
@@ -93,13 +103,13 @@ namespace Linkfolio.Business.Business
                 {
                     /// Retirando espaços em vazios no início e fim das variáveis.
                     portfolio.Gkey = gkey.Trim();
-                    portfolio =  this.repository.Get(portfolio);
+                    portfolio = this.repository.Get(portfolio);
                     if (portfolio == null || string.IsNullOrEmpty(portfolio.Title))
                     {
                         throw new Exception("Portfolio não localizado");
                     }
                     return portfolio;
-                   
+
                 }
                 throw new Exception("Valor inválido");
             }
@@ -111,15 +121,14 @@ namespace Linkfolio.Business.Business
         }
 
         /// <summary>
-        /// Método de negócio responsável por trazer as informações sobre todas as contas de usuário registradas. 
-        /// Retorna uma lista com o(s) usuário(s) encontrado(s).
+        /// Método de negócio responsável por trazer as informações sobre todos os portfolios de um usuário. 
         /// </summary>
         public List<PortfolioModel> GetAllPortfolio(string gkey)
         {
             try
             {
                 string strGkeyModel = "^([0-9]{1,})$";
-                if(!string.IsNullOrEmpty(gkey) && (Regex.IsMatch(gkey, strGkeyModel))) 
+                if (!string.IsNullOrEmpty(gkey) && (Regex.IsMatch(gkey, strGkeyModel)))
                 {
                     this.loginBusiness.GetLogin(gkey);
                     List<PortfolioModel> portfolioList = new List<PortfolioModel>();
@@ -131,12 +140,12 @@ namespace Linkfolio.Business.Business
                     List<PortfolioModel> portfolioReturn = new List<PortfolioModel>();
                     foreach (PortfolioModel p in portfolioList)
                     {
-                        if(p.UserGkey == gkey)
+                        if (p.UserGkey == gkey)
                         {
                             portfolioReturn.Add(p);
                         }
                     }
-                    if(portfolioReturn.Any() == false)
+                    if (portfolioReturn.Any() == false)
                     {
                         throw new Exception("Nenhum portifolio registrado nesse usuário");
                     }
@@ -152,10 +161,9 @@ namespace Linkfolio.Business.Business
         }
 
         /// <summary>
-        /// Método de negócio responsável por atualizar o(s) dado(s) da conta de um certo usuário.
-        /// Nesse método é chamado o método dataUpdateVerification para verificar se os dados estão de acordo.
+        /// Método de negócio responsável por atualizar o(s) dado(s) de um portfolio.
         /// </summary>
-        /// <param name="newLogin">Informações necessárias para encontrar a conta do usuário no banco de dados e a(s) informação(ões) a ser(em) atualizada(s).</param>
+        /// <param name="newPortfolio">Informações necessárias para encontrar o portfolio no banco de dados e a(s) informação(ões) a ser(em) atualizada(s).</param>
         public string UpdatePortfolio(PortfolioModel newPortfolio)
         {
             try
@@ -173,14 +181,11 @@ namespace Linkfolio.Business.Business
                     }
                     else
                     {
-                        ///!!!
-                        ///Necessário rever a questão de _id, pois na requisição muda o _id e assim não é possível dar update.
-                        ///Entretanto o _id teoricamente não irá vir na requisição.
                         newPortfolio._id = portfolio._id;
                         newPortfolio.Gkey = portfolio.Gkey;
                         newPortfolio.Created = portfolio.Created;
                         newPortfolio.UserGkey = portfolio.UserGkey;
-                        if(string.IsNullOrEmpty(newPortfolio.Title.Trim()))
+                        if (string.IsNullOrEmpty(newPortfolio.Title.Trim()))
                         {
                             throw new Exception("Valor de título inválido");
                         }
@@ -192,7 +197,7 @@ namespace Linkfolio.Business.Business
                         {
                             throw new Exception("Valor de descrição inválido");
                         }
-                        if(newPortfolio.Description == portfolio.Description)
+                        if (newPortfolio.Description == portfolio.Description)
                         {
                             newPortfolio.Description = portfolio.Description;
                         }
@@ -212,6 +217,11 @@ namespace Linkfolio.Business.Business
             }
         }
 
+
+        /// <summary>
+        /// Método de negócio responsável por excluir um portfolio.
+        /// </summary>
+        /// <param name="gkey">Informação necessária para encontrar o portfolio no banco de dados.</param>
         public string DeletePortfolio(string gkey)
         {
             try
@@ -238,6 +248,6 @@ namespace Linkfolio.Business.Business
         }
 
 
-       
+
     }
 }

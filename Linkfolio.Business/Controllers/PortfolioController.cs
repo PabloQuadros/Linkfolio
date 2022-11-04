@@ -5,6 +5,12 @@ using Model.Shared.User;
 
 namespace Linkfolio.Business.Controllers
 {
+    /// <summary>
+    /// Classe responsável por receber a(s) requisição(ões).
+    /// Funções da classe:
+    ///     1. Receber requisições Get/Post/Put/Delete e encaminhar o(s) dado(s) para a classe PortfolioBusiness
+    ///     2. Receber o(s) dado(s) do PortfolioBusiness e mostra-lo(s) para o usuário.
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     [Authorize]
@@ -22,10 +28,9 @@ namespace Linkfolio.Business.Controllers
         }
 
         /// <summary>
-        /// Requisição PUT
-        /// Função responsável por receber uma requisição put e encaminhar os dados para a criação de um novo usuário.
+        /// Requisição POST
+        /// Função responsável por receber uma requisição post e encaminhar os dados para a criação de um portfolio.
         /// </summary>
-        /// <returns> Retorna objeto do tipo object</returns>
         [HttpPost("Create")]
         public object Create([FromBody] PortfolioModel portfolio)
         {
@@ -39,11 +44,9 @@ namespace Linkfolio.Business.Controllers
             }
         }
         /// <summary>
-        /// Requisição GET(Login)
-        /// Função responsável por receber uma requisição get e encaminhar o valor recebido para buscar os dados de um usuário existente. 
+        /// Requisição GET
+        /// Função responsável por receber uma requisição get e encaminhar o valor recebido para buscar os dados de um portfolio. 
         /// </summary>
-        /// <returns> Retorna objeto do tipo object</returns>
-
         [HttpGet("Read")]
         public object GetPortfolio(string gkey)
         {
@@ -59,10 +62,9 @@ namespace Linkfolio.Business.Controllers
         }
 
         /// <summary>
-        /// Requisição GET(All Login)
-        /// Função responsável por receber uma requisição get e retornar uma lista de todos os usuários registrados no banco de dados. 
+        /// Requisição GET(All Portfolios)
+        /// Função responsável por receber uma requisição get e retornar uma lista de todos os portfolios registrados de um usuário no banco de dados. 
         /// </summary>
-        /// <returns> Retorna objeto do tipo object</returns>
         [HttpGet("GetAllPortfolio")]
         public object GetAllPortfolio(string gkey)
         {
@@ -77,10 +79,9 @@ namespace Linkfolio.Business.Controllers
         }
 
         /// <summary>
-        /// Requisição POST
-        /// Função responsável por receber uma requisição post e encaminhar o(s) dado(s) para atualizar o cadastro de um usuário.
+        /// Requisição PUT
+        /// Função responsável por receber uma requisição put e encaminhar o(s) dado(s) para atualizar o cadastro de um portfolio.
         /// </summary>
-        /// <returns> Retorna objeto do tipo object</returns>
         [HttpPut("Update")]
         public object UpdatePortfolio([FromBody] PortfolioModel portfolio)
         {
@@ -97,9 +98,8 @@ namespace Linkfolio.Business.Controllers
 
         /// <summary>
         /// Requisição DELETE
-        /// Função responsável por receber uma requisição delete e encaminhar o valor para a classe LoginBusiness deletar a conta de um usuário.
+        /// Função responsável por receber uma requisição delete e encaminhar o valor para a classe PortfolioBusiness deletar um usuário.
         /// </summary>
-        /// <returns> Retorna objeto do tipo object</returns>
         [HttpDelete("Delete")]
         public object Delete(string gkey)
         {

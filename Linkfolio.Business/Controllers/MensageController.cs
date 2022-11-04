@@ -5,6 +5,12 @@ using Model.Shared.User;
 
 namespace Linkfolio.Business.Controllers
 {
+    /// <summary>
+    /// Classe responsável por receber a(s) requisição(ões).
+    /// Funções da classe:
+    ///     1. Receber requisições Get/Post/Put/Delete e encaminhar o(s) dado(s) para a classe MensageBusiness
+    ///     2. Receber o(s) dado(s) do MensageBusiness e mostra-lo(s) para o usuário.
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     [Authorize]
@@ -21,10 +27,9 @@ namespace Linkfolio.Business.Controllers
         }
 
         /// <summary>
-        /// Requisição PUT
-        /// Função responsável por receber uma requisição put e encaminhar os dados para a criação de um novo usuário.
+        /// Requisição POST
+        /// Função responsável por receber uma requisição post e encaminhar os dados para a criação de uma nova mensagem.
         /// </summary>
-        /// <returns> Retorna objeto do tipo object</returns>
         [HttpPost("Create")]
         public object Create([FromBody] MensageModel msg)
         {
@@ -39,11 +44,9 @@ namespace Linkfolio.Business.Controllers
         }
 
         /// <summary>
-        /// Requisição GET(Login)
-        /// Função responsável por receber uma requisição get e encaminhar o valor recebido para buscar os dados de um usuário existente. 
+        /// Requisição GET
+        /// Função responsável por receber uma requisição get e encaminhar o valor recebido para buscar uma mensagem. 
         /// </summary>
-        /// <returns> Retorna objeto do tipo object</returns>
-
         [HttpGet("Read")]
         public object GetMensage(string gkey)
         {
@@ -58,12 +61,10 @@ namespace Linkfolio.Business.Controllers
 
         }
 
-
         /// <summary>
-        /// Requisição POST
-        /// Função responsável por receber uma requisição post e encaminhar o(s) dado(s) para atualizar o cadastro de um usuário.
+        /// Requisição PUT
+        /// Função responsável por receber uma requisição put e encaminhar o(s) dado(s) para atualizar uma mensagem.
         /// </summary>
-        /// <returns> Retorna objeto do tipo object</returns>
         [HttpPut("Update")]
         public object UpdateMensage([FromBody] MensageModel msg)
         {
@@ -80,9 +81,8 @@ namespace Linkfolio.Business.Controllers
 
         /// <summary>
         /// Requisição DELETE
-        /// Função responsável por receber uma requisição delete e encaminhar o valor para a classe LoginBusiness deletar a conta de um usuário.
+        /// Função responsável por receber uma requisição delete e encaminhar o valor para a classe MensagemBusiness deletar uma mensagem.
         /// </summary>
-        /// <returns> Retorna objeto do tipo object</returns>
         [HttpDelete("Delete")]
         public object Delete(string gkey)
         {

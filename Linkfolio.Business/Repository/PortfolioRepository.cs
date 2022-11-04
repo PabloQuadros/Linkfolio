@@ -8,10 +8,7 @@ namespace Linkfolio.Business.Repository
         protected override void Init()
         {
         }
-        /// <summary>
-        /// Método responsável por criar uma nova conta no banco de dados.
-        /// </summary>
-        /// <param name="login">Dados da conta a ser criada</param>
+
         public bool Create(PortfolioModel portfolio)
         {
             try
@@ -33,10 +30,7 @@ namespace Linkfolio.Business.Repository
             }
         }
 
-        /// <summary>
-        /// Método responsável por ler os dados de uma conta no banco de dados.
-        /// </summary>
-        /// <param name="login">Dados que referenciam a conta a ser consultada no banco de dados.</param>
+
         public PortfolioModel? Get(PortfolioModel portfolio)
         {
             try
@@ -64,7 +58,7 @@ namespace Linkfolio.Business.Repository
         }
 
 
-         public bool? Delete(MensageModel msg)
+        public bool? Delete(MensageModel msg)
         {
             try
             {
@@ -92,10 +86,7 @@ namespace Linkfolio.Business.Repository
             }
         }
 
-        /// <summary>
-        /// Método responsável por ler os dados de uma conta no banco de dados.
-        /// </summary>
-        /// <param name="login">Dados que referenciam a conta a ser consultada no banco de dados.</param>
+
         public List<PortfolioModel>? List(List<PortfolioModel>? portfolioList)
         {
             try
@@ -120,10 +111,7 @@ namespace Linkfolio.Business.Repository
             }
         }
 
-        /// <summary>
-        /// Método responsável por atualizar o(s) dado(s) de uma conta no banco de dados.
-        /// </summary>
-        /// <param name="login">Dados para localizar a conta e os dados a serem atualizados.</param>
+
         public bool Update(PortfolioModel portfolio)
         {
             try
@@ -149,10 +137,7 @@ namespace Linkfolio.Business.Repository
         }
 
 
-        /// <summary>
-        /// Método responsável por deletar uma conta no banco de dados.
-        /// </summary>
-        /// <param name="login">Dados para localizar a conta a ser deletada.</param>
+
         public bool? Delete(PortfolioModel portfolio)
         {
             try

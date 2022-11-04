@@ -17,7 +17,7 @@ namespace Linkfolio.Business
     {
         public static void Main(string[] args)
         {
-            
+
             CreateHostBuilder(args).Build().Run();
 
         }
