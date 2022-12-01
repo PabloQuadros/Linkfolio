@@ -87,7 +87,13 @@ namespace Linkfolio.Business
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+               
+            app.UseCors(c =>
+            {
+                c.AllowAnyHeader();
+                c.AllowAnyMethod();
+                c.AllowAnyOrigin();
+            });
 
             app.UseEndpoints(endpoints =>
             {
